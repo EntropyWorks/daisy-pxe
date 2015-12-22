@@ -1,0 +1,173 @@
+{
+    "root_pwd":"ossdbg1",
+    "storage_size":"300",
+    "memory_size":"31",
+    "root_lv_size":"51200",
+    "swap_lv_size":"10240",
+    "db_lv_size":"61440",
+    "glance_lv_size":"168000",
+    "nova_lv_size":"4096",
+    "cinder_vg_size":"10240",
+    "disk_num":"1",
+    "root_disk":"sda",
+    "disk_list":"sda,sdb",
+    "reboot":"no",
+    "hugepages":"1",
+    "hostname":"bsp4_slot11",
+    "mount_glance":"no",
+    "tfg_bin":"/home/bsp4/liushn/ZXTFG-1.0-217.KVM.CGSL_VPLAT-5.1.x86_64.bin",
+    "dhcp_mac":"00:22:93:7a:86:fb",
+    "iso_path":"/home/bsp4/liushn/CGSL_VPLAT-5.1-171-x86_64.iso",
+    "interfaces": [
+    {
+      "name": "eth0", 
+      "is_deployment": false, 
+      "deleted": false, 
+      "ip":"10.43.166.1",
+       "created_at": "2015-09-29T03:59:50.000000", 
+      "slave2": "ebl", 
+      "updated_at": "2015-09-29T03:59:50.000000", 
+      "mac": "00:07:e9:15:99:01", 
+      "netmask":"255.255.255.0",    
+       "gateway": "10.43.166.0",    
+      "pci": "0000:11:00.0", 
+      "slave1": "", 
+      "mode": "", 
+      "assigned_networks": [
+        {
+          "capability": 200, 
+          "physnet_name": "nttt", 
+          "ip":"10.43.166.0",
+          "netmask":"255.255.255.0",    
+           "gateway": "10.43.166.0", 
+          "ml2_type": "vlan", 
+          "network_type": "MANAGEMENT"
+        }
+      ], 
+      "host_id": "9a07c5fe-71e9-425f-a281-0b129b6d9044", 
+      "deleted_at": null, 
+      "type": "ether", 
+      "id": "191ca9a3-d330-4a6a-9975-e77a3d002b8e"
+    }, 
+    {
+      "name": "eth1", 
+      "is_deployment": false, 
+      "deleted": false, 
+      "gateway":null ,
+      "created_at": "2015-09-29T03:59:50.000000", 
+      "slave2": "ebl", 
+      "updated_at": "2015-09-29T03:59:50.000000", 
+      "mac": "12:23:34:57", 
+      "ip":"192.168.0.5",
+      "netmask": "255.255.254.0", 
+      "pci": "0000:04:00.0", 
+      "slave1": "ebl", 
+      "mode": "", 
+      "assigned_networks": [
+        {
+          "capability": 200, 
+          "physnet_name": "nttt", 
+          "ip":"192.168.0.3",
+           "netmask":"255.255.255.0",
+          "gateway":"195.168.1.1",
+          "ml2_type": "vlan", 
+          "network_type": "MANAGEMENT"
+        },
+        {
+          "capability": 200, 
+          "physnet_name": "nttt", 
+          "gateway": "10.43.166.2", 
+          "ml2_type": "vlan", 
+          "network_type": "ovs"
+        }
+      ], 
+      "host_id": "9a07c5fe-71e9-425f-a281-0b129b6d9044", 
+      "deleted_at": null, 
+      "type": "ether", 
+      "id": "79eab777-e94e-4914-8741-65d765062626"
+    }, 
+    {
+      "name": "bond0", 
+      "is_deployment": true, 
+      "deleted": false, 
+      "ip": "195.168.1.21", 
+      "created_at": "2015-09-29T03:59:50.000000", 
+      "slave2": "eth0", 
+      "updated_at": "2015-09-29T03:59:50.000000", 
+      "mac": "00:07:e9:15:99:00", 
+      "netmask": "255.255.255.0", 
+      "pci": "0000:10:00.1", 
+      "slave1": "eth2", 
+      "gateway": "10.43.166.1", 
+      "mode": "1", 
+      "assigned_networks": [
+        {
+          "capability": 200, 
+          "physnet_name": "nttt", 
+          "gateway": null, 
+          "ml2_type": "vlan", 
+          "network_type": "MANAGEMENT"
+        }
+      ], 
+      "host_id": "9a07c5fe-71e9-425f-a281-0b129b6d9044", 
+      "deleted_at": null, 
+      "type": "bond", 
+      "id": "9a796f6b-1422-4e8c-ac97-c229250645ce"
+    },
+    {
+      "name": "eth2", 
+      "is_deployment": true, 
+      "deleted": false, 
+      "ip": "195.168.1.21", 
+      "created_at": "2015-09-29T03:59:50.000000", 
+      "slave2": "ebl", 
+      "updated_at": "2015-09-29T03:59:50.000000", 
+      "mac": "00:07:e9:15:99:00", 
+      "netmask": "255.255.255.0", 
+      "gateway": "10.43.166.1", 
+      "pci": "0000:10:00.0", 
+      "slave1": "ebl", 
+      "mode": "", 
+      "assigned_networks": [
+        {
+          "capability": 200, 
+          "physnet_name": "nttt", 
+          "gateway": null, 
+          "ml2_type": "vlan", 
+          "network_type": "ovs"
+        }
+      ], 
+      "host_id": "9a07c5fe-71e9-425f-a281-0b129b6d9044", 
+      "deleted_at": null, 
+      "type": "ether", 
+      "id": "9a796f6b-1422-4e8c-ac97-c229250645ce"
+    },
+    {
+      "name": "eth3", 
+      "is_deployment": true, 
+      "deleted": false, 
+      "ip": "195.168.1.21", 
+      "created_at": "2015-09-29T03:59:50.000000", 
+      "slave2": "ebl", 
+      "updated_at": "2015-09-29T03:59:50.000000", 
+      "mac": "00:07:e9:15:99:00", 
+      "netmask": "255.255.255.0", 
+      "pci": "0000:10:00.1", 
+      "slave1": "ebl", 
+      "mode": "", 
+      "assigned_networks": [
+        {
+          "capability": 200, 
+          "physnet_name": "nttt", 
+          "gateway": null, 
+          "ml2_type": "vlan", 
+          "network_type": "ovs"
+        }
+      ], 
+      "host_id": "9a07c5fe-71e9-425f-a281-0b129b6d9044", 
+      "deleted_at": null, 
+      "type": "ether", 
+      "id": "9a796f6b-1422-4e8c-ac97-c229250645ce"
+    }
+  ]
+}

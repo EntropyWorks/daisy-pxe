@@ -1,0 +1,62 @@
+#!/bin/bash
+
+###############################################################################################
+#    功能：搭建pxe服务器  
+###############################################################################################
+WORKDIR=/etc/pxe_install
+$WORKDIR/scripts/common.sh
+$WORKDIR/scripts/interface.sh
+
+# 函数列表
+function welcome
+{
+    echo "====================================================================="
+	echo
+	echo -e "\t\t\tOS Auto Install Tools"
+	echo -e "\t\t\t-----------------------"
+	echo
+  echo "build pxe server, please wait ...."
+	echo
+  echo "====================================================================="
+  
+}
+
+function showhelp
+{
+    echo -e "Usage1: $0 config_file_path"    
+    echo -e "Options:"
+    echo -e "   config_file_path:  json file path that contain customized config about pxe server"    
+    echo -e "                      (json file format is as ${WORKDIR}/json_format/server.json)"    
+    echo ""
+    echo -e "Usage2: $0 --help     display this help and exit" 
+    echo ""
+}
+
+
+# ##############################################################################################
+#                                            入口                                              #
+# ##############################################################################################
+#显示帮助提示
+if [[ `echo $* |grep -wi 'help'` != "" ]];then
+    showhelp
+    exit 0
+fi
+
+#  判断入参
+if [ ! -f "$1" ]; then 
+echo "input param of json file...."
+exit 0
+fi
+
+welcome
+
+$WORKDIR/scripts/create_pxesvr.sh ${WORKDIR} $1
+
+echo "************************************************************"
+echo "good! pxe server been built!"
+echo "now you can enjoy installing os by pxe server"
+echo "************************************************************"
+
+
+exit 0
+

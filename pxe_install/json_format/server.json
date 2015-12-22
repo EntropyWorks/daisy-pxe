@@ -1,0 +1,8 @@
+{
+    "build_pxe":"yes",
+    "ethname_l":"er3",
+    "ip_addr_l":"192.168.1.1",
+    "net_mask_l":"255.255.255.0",
+    "client_ip_begin":"192.168.1.100",
+    "client_ip_end":"192.168.1.200"
+}
